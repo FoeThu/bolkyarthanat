@@ -1,0 +1,50 @@
+#this program is python simple game 
+def game():                        #create function
+    from random import randint                           #import randint module
+    menu = ["Major","Tiger","Gun"]          #create bokyarthanat list
+    computer = menu[randint(0,2)]
+    print ("""Hey guy,this program is 'bokyarthanat' game,you can play with computer.
+    you can choose your item by the following>>>
+    (1)Major
+    (2)Tiger
+    (3)Gun """)
+    user = int(input("Enter your item number : ")) #user input
+    if user == 1:                                  #change int to string
+        user ="Major"
+    elif user == 2:
+        user = "Tiger"
+    elif user == 3:
+        user = "Gun"
+    else :
+        print ("ples enter 1 or 2 or 3, correctly")
+    print ("\n user     :",user)
+    print ("computer : ",computer)
+    if computer == user :
+        print ("The game is draw! ")
+    elif computer == "Major"  :
+        if user == "Tiger":
+         print ("Congratulation! \nYou are 'tiger' and you kill the major,So you win")
+        else :
+             print("Oop!you lose \n You are 'gun' and computer is 'major'")
+    elif computer == "Tiger":
+        if user == "Major":
+         print("Oop!you lose \n You are 'major' and you had been kill by 'tiger'")
+        else:
+            print("Congratulation! \n You are 'gun' and you kill the 'tiger'")
+    elif computer == "Gun":
+        if user == "Major":
+            print("Congratulation! You are 'major' and you won the 'gun' ")
+        else:
+            print("Oop!you lose You are 'tiger' and you had been kill by 'gun'") 
+
+            
+go=input("Hey guy,do you want to play 'BoKyarThanat' game.If you want to play gmae enter yes : ") #start here
+if go=="yes" :
+     print(game())                      #call function
+elif go=="Yes":
+    print(game())
+else :
+    print(input("press<enter>"))
+ 
+
+ 
