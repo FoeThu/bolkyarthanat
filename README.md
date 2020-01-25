@@ -1,0 +1,2 @@
+# bolkyarthanat
+simple python game
